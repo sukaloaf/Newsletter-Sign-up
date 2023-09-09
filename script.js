@@ -4,6 +4,7 @@ const closeButton = document.getElementById("closeButton");
 const container = document.querySelector(".container");
 const success = document.querySelector(".successMessage");
 const emailRequired = document.getElementById("validEmail");
+const emailAddress = document.getElementById("emailAddress");
 
 input.addEventListener("keydown", (event) => {
   if (event.key === "Enter") {
@@ -12,6 +13,7 @@ input.addEventListener("keydown", (event) => {
 
     if (isValidEmail(inputValue)) {
       submit();
+      emailAddress.innerText = `${input.value}`;
     } else {
       badEmail();
     }
@@ -23,6 +25,7 @@ submitButton.addEventListener("click", () => {
 
   if (isValidEmail(inputValue)) {
     submit();
+    emailAddress.innerText = `${input.value}`;
   } else {
     badEmail();
   }

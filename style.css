@@ -140,6 +140,10 @@ body {
   font-size: 12pt;
 }
 
+#emailAddress {
+  font-weight: 700;
+}
+
 #closeButton {
   width: 100%;
   margin-top: 25px;
